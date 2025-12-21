@@ -1,0 +1,66 @@
+{% block content %}
+{% load static %}
+
+{% include 'header.html' %}
+
+ <!--/ Intro Single star /-->
+ <section class="intro-single">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-8">
+          <div class="title-single-box">
+            <h1 class="title-single">Profile</h1>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+  <!--/ Intro Single End /-->
+
+    <!--/ Contact Star /-->
+    <section class="contact">
+        <div class="container">
+          <div class="row">
+           
+            <div class="col-sm-12 section-t8">
+              <div class="row">
+                <div class="col-md-6">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <td class="name-pr">{{result.name}}</td>
+
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <th>Email </th>
+
+                                <td class="price-pr">{{result.email}}</td>
+                               
+                            </tr>
+                            <tr>
+                                <th>Password </th>
+  
+                                  <td class="price-pr">{{result.password}}</td>
+                                 
+                              </tr>
+                        </tbody>
+                    </table>
+<a class="btn btn-success" href="editpro/{{result.id}}">Edit</a>
+
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--/ Contact End /-->
+
+{% include 'footer.html' %}
+
+{% endblock %}
